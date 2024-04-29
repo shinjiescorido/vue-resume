@@ -1,14 +1,46 @@
-{
+/**
+ * Configuration options for the TypeScript compiler.
+ */
+ {
+  /**
+   * Compiler options that affect code generation.
+   */
   "compilerOptions": {
+    /**
+     * Specify the ECMAScript target version for generated JavaScript.
+     * In this case, code is compiled to target ES5 for broad browser compatibility.
+     */
     "target": "es5",
+    /**
+     * Specify the module format for generated JavaScript.
+     * "esnext" indicates using the latest ECMAScript modules syntax.
+     */
     "module": "esnext",
+    /**
+     * Set the base directory for resolving non-relative module paths.
+     * "." indicates the current directory.
+     */
     "baseUrl": "./",
+    /**
+     * Specify how modules are resolved.
+     * "node" uses Node.js module resolution logic.
+     */
     "moduleResolution": "node",
+    /**
+     * Define path aliases for easier referencing of modules within the project.
+     * "@/*" alias is mapped to "src/*" directory for modules starting with "@".
+     */
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
+    /**
+     * Specify libraries to include in the generated output.
+     * "esnext" includes the latest ECMAScript features.
+     * "dom" and "dom.iterable" include DOM and iterable types for browser compatibility.
+     * "scripthost" includes types for the script hosting environment (optional).
+     */
     "lib": [
       "esnext",
       "dom",

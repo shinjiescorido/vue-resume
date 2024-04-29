@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- /**
+   * The root component of the application.
+   * Renders the `ResumePage` component.
+   */ -->
+  <div id="app">
+    <ResumePage />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/**
+ * Vue component representing the root application.
+ */
+import ResumePage from "@/views/ResumePage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ResumePage,
+  },
+};
 </script>
 
 <style>
+html {
+  background: #000;
+}
+
+body {
+  margin: 0px;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: #000;
 }
 </style>
