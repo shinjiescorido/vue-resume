@@ -1,24 +1,20 @@
-# my-vue-app
+# Resume App
 
-## Project setup
-```
-npm install
-```
+This is a Resume app made using Vue.js framework
 
-### Compiles and hot-reloads for development
+## Requirements
+ 1. Docker
+ 2. Docker-compose
+ 3. API service please run `https://github.com/shinjiescorido/nest-resume`
+## Installation
+```bash
+git clone https://github.com/shinjiescorido/vue-resume.git
+cd vue-resume
+docker-compose up -d
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Stack
+1. Vue.js
+2. Webpack
+3. Eslint
+4. Docker
+5. Sass
