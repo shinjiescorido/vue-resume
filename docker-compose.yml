@@ -2,8 +2,9 @@ version: '3'
 
 services:
   vue-app:
+    container_name: resume_vue_app
     build: .
     ports:
-      - "8080:8080"
+      - "80:80"
     environment:
       - VUE_APP_API_URL=${VUE_APP_API_URL}
