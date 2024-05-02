@@ -1,9 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+/*@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
 
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+*/
+@font-face {
+    font-family: 'Bebass';
+    src: url('../assets/fonts/bebasneue-book-webfont.woff2') format('woff2'),
+         url('../assets/fonts/bebasneue-book-webfont.woff') format('woff');
+    /* Include additional font formats for wider browser support */
+}
+
+@font-face {
+    font-family: 'Monseratt';
+    src: url('../assets/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/montserrat-regular-webfont.woff') format('woff');
+    /* Include additional font formats for wider browser support */
+}
 
 body{
-	font-family: 'Cutive Mono';
+	font-family: 'Monseratt', sans-serif;
 	background-color:rgba(0,0,0,1.00);
 	color:rgba(255,255,255,1.00);
     margin:0px;
@@ -34,7 +48,7 @@ body * {
 }
 
 header{
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Bebass', sans-serif;
 	font-size:200%;
 	font-weight:700;
 	letter-spacing:1px;
@@ -43,7 +57,7 @@ header{
 }
 
 h2{
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Bebass', sans-serif;
 	font-weight:bold;
 	font-size:20px;
 	height:20px;
@@ -51,21 +65,28 @@ h2{
 
 
 }
-
+.section {
+	float: right;
+	li {
+		margin-top: 10px;
+	}
+}
 h3{
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Monseratt', sans-serif;
+	font-size: medium;
 	font-weight:400;
 	margin:0px;
-	margin-top:-10px;
+	margin-top:10px;
 }
 
 h4{
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Monseratt', sans-serif;
 	font-style:italic;
 	font-weight:400;
 	font-size:12px;
 	margin:0px;
-	margin-top:-15px;
+	/* margin-top:-15px; */
+	margin-top: 5px;
 }
 
 .section{

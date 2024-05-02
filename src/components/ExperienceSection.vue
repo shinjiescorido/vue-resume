@@ -16,9 +16,9 @@
     <header class="resumeheader">Experience</header>
     <ul v-if="experiences">
       <li v-for="experience in experiences" :key="experience.id">
-        <h2>{{ experience.title }}</h2>
+        <h2>{{ experience.position }}</h2>
         <h3>{{ experience.company }}</h3>
-        <h4>{{ experience.startDate }} - {{ experience.endDate }}</h4>
+        <h4>{{ formatDate(experience.startDate)  }} - {{ formatDate(experience.endDate) }}</h4>
         <p>{{ experience.description }}</p>
       </li>
     </ul>
@@ -39,5 +39,11 @@ export default {
      */
     experiences: Array, // Define prop type as an array
   },
+  methods: {
+    formatDate(value) {
+      const date = new Date(value);
+      return `${date.getMonth() + 1}/${date.getFullYear()}`; // Format as MM-YYYY
+    }
+  }
 };
 </script>

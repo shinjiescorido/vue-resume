@@ -16,7 +16,7 @@
       <li v-for="education in educations" :key="education.id">
         <h2>{{ education.school }}</h2>
         <h3>{{ education.course }}</h3>
-        <h4>{{ education.date }}</h4>
+        <h4>{{ formatDate(education.date) }}</h4>
       </li>
     </ul>
     <p v-else>No education data available.</p>
@@ -36,5 +36,11 @@ export default {
      */
     educations: Array, // Define prop type as an array
   },
+  methods: {
+    formatDate(value) {
+      const date = new Date(value);
+      return `${date.getMonth() + 1}/${date.getFullYear()}`; // Format as MM-YYYY
+    }
+  }
 };
 </script>
